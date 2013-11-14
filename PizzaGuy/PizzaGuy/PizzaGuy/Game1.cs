@@ -18,6 +18,9 @@ namespace PizzaGuy
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        PizzaGuy pizzaguy;
+        Texture2D Spritesheet;
+
 
         public Game1()
         {
@@ -28,7 +31,7 @@ namespace PizzaGuy
         /// <summary>
         /// Allows the game to perform any initialization it needs to before starting to run.
         /// This is where it can query for any required services and load any non-graphic
-        /// related content.  Calling base.Initialize will enumerate through any components
+        /// related content. Calling base.Initialize will enumerate through any components
         /// and initialize them as well.
         /// </summary>
         protected override void Initialize()
@@ -46,6 +49,8 @@ namespace PizzaGuy
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
+            Spritesheet = Content.Load<Texture2D>(@"Pizzaguy");
+            pizzaguy = new PizzaGuy (new Vector2(0, 0), Spritesheet, new Rectangle(360, 130, 55, 75), Vector2.Zero);
 
             // TODO: use this.Content to load your game content here
         }
@@ -71,7 +76,7 @@ namespace PizzaGuy
                 this.Exit();
 
             // TODO: Add your update logic here
-
+            pizzaguy.Update(gameTime);
             base.Update(gameTime);
         }
 
@@ -84,8 +89,10 @@ namespace PizzaGuy
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
-
+            spriteBatch.Begin();
+            pizzaguy.Draw(spriteBatch);
             base.Draw(gameTime);
+            spriteBatch.End();
         }
     }
 }

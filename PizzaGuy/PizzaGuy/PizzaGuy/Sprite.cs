@@ -9,7 +9,6 @@ namespace PizzaGuy
 {
     class Sprite
     {
-        /* This Sprite Class is used for items such as shooting and stuff. */
         public Texture2D Texture;
 
         protected List<Rectangle> frames = new List<Rectangle>();
@@ -19,6 +18,7 @@ namespace PizzaGuy
         private float frameTime = 0.1f;
         private float timeForCurrentFrame = 0.0f;
 
+
         private Color tintColor = Color.White;
         private float rotation = 0.0f;
 
@@ -26,12 +26,8 @@ namespace PizzaGuy
         public int BoundingXPadding = 0;
         public int BoundingYPadding = 0;
 
-        public object tag;
-
-
         protected Vector2 location = Vector2.Zero;
         protected Vector2 velocity = Vector2.Zero;
-        protected Vector2 origin = Vector2.Zero;
 
         public Sprite(
             Vector2 location,
@@ -46,11 +42,6 @@ namespace PizzaGuy
             frames.Add(initialFrame);
             frameWidth = initialFrame.Width;
             frameHeight = initialFrame.Height;
-
-            this.origin = new Vector2(frameWidth / 2, frameHeight / 2);
-
-            tag = null;
-
         }
 
         public Vector2 Location
@@ -65,11 +56,7 @@ namespace PizzaGuy
             set { velocity = value; }
         }
 
-        public Vector2 Origin
-        {
-            get { return origin; }
-            set { origin = value; }
-        }        
+        public int HitPoints { get; set; }
 
         public Color TintColor
         {
@@ -179,10 +166,11 @@ namespace PizzaGuy
                 Source,
                 tintColor,
                 rotation,
-                origin,
+                new Vector2(frameWidth / 2, frameHeight / 2),
                 1.0f,
                 SpriteEffects.None,
                 0.0f);
+
         }
 
     }
