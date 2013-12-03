@@ -8,6 +8,9 @@ using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
+using xTile;
+using xTile.Display;
+using xTile.Tiles;
 
 namespace PizzaGuy
 {
@@ -17,14 +20,21 @@ namespace PizzaGuy
     public class Game1 : Microsoft.Xna.Framework.Game
     {
         GraphicsDeviceManager graphics;
-        SpriteBatch spriteBatch;
+        public SpriteBatch spriteBatch;
         PizzaGuy pizzaguy;
-        Texture2D Spritesheet;
-
+        Ghost ghost;
+        public Texture2D Spritesheet;
+        Map map;
+        IDisplayDevice xnaDisplayDevice;
+        xTile.Dimensions.Rectangle viewport;
+        private static Song menuMusic;
 
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
+
+            IsMouseVisible = true;
+
             Content.RootDirectory = "Content";
         }
 
@@ -38,6 +48,9 @@ namespace PizzaGuy
         {
             // TODO: Add your initialization logic here
 
+            xnaDisplayDevice = new xTile.Display.XnaDisplayDevice(Content, GraphicsDevice);
+            viewport = new xTile.Dimensions.Rectangle(new xTile.Dimensions.Size(this.Window.ClientBounds.Width, this.Window.ClientBounds.Height));
+
             base.Initialize();
         }
 
@@ -48,9 +61,17 @@ namespace PizzaGuy
         protected override void LoadContent()
         {
             // Create a new SpriteBatch, which can be used to draw textures.
+
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            Spritesheet = Content.Load<Texture2D>(@"Pizzaguy");
-            pizzaguy = new PizzaGuy (new Vector2(0, 0), Spritesheet, new Rectangle(360, 130, 55, 75), Vector2.Zero);
+            Spritesheet = Content.Load<Texture2D>(@"SpriteSheet");
+            map = Content.Load<Map>("Map1");
+            menuMusic = Content.Load<Song>("introMusic");
+            map.LoadTileSheets(xnaDisplayDevice);
+            MediaPlayer.Play(menuMusic);
+
+
+            pizzaguy = new PizzaGuy(new Vector2(32, 32), Spritesheet, new Rectangle(300, 300, 32, 32), Vector2.Zero, map.GetLayer("untitled layer"));
+            ghost = new Ghost(new Vector2(32, 32*10), Spritesheet, new Rectangle(500, 300, 32, 32), Vector2.Zero, map.GetLayer("untitled layer"), pizzaguy);
 
             // TODO: use this.Content to load your game content here
         }
@@ -59,6 +80,7 @@ namespace PizzaGuy
         /// UnloadContent will be called once per game and is the place to unload
         /// all content.
         /// </summary>
+        /// 
         protected override void UnloadContent()
         {
             // TODO: Unload any non ContentManager content here
@@ -75,10 +97,20 @@ namespace PizzaGuy
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
+            MouseState ms = Mouse.GetState();
+            int index = map.TileSheets[0].GetTileIndex(new xTile.Dimensions.Location(ms.X, ms.Y));
+            Tile tile = map.GetLayer("untitled layer").Tiles[1, 1];
+
+            Window.Title = index.ToString();
+
             // TODO: Add your update logic here
             pizzaguy.Update(gameTime);
+            ghost.Update(gameTime);
+
             base.Update(gameTime);
         }
+
+
 
         /// <summary>
         /// This is called when the game should draw itself.
@@ -86,11 +118,18 @@ namespace PizzaGuy
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+
+            GraphicsDevice.Clear(Color.Black);
+
+            map.Draw(xnaDisplayDevice, viewport);
 
             // TODO: Add your drawing code here
+            //spriteBatch.Begin();
+            //spriteBatch.Draw(background, mainFrame, Color.Wheat);
+            //spriteBatch.End()
             spriteBatch.Begin();
             pizzaguy.Draw(spriteBatch);
+            ghost.Draw(spriteBatch);
             base.Draw(gameTime);
             spriteBatch.End();
         }

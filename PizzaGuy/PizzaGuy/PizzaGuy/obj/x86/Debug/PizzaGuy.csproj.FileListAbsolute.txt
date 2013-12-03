@@ -1,0 +1,34 @@
+C:\Users\EAHS CS\Documents\GitHub\PizzaGuy\PizzaGuy\PizzaGuy\PizzaGuy\bin\x86\Debug\Content\SpriteSheet.xnb
+C:\Users\EAHS CS\Documents\GitHub\PizzaGuy\PizzaGuy\PizzaGuy\PizzaGuy\bin\x86\Debug\Content\Pizzaguy.xnb
+C:\Users\EAHS CS\Documents\GitHub\PizzaGuy\PizzaGuy\PizzaGuy\PizzaGuy\bin\x86\Debug\PizzaGuy.exe
+C:\Users\EAHS CS\Documents\GitHub\PizzaGuy\PizzaGuy\PizzaGuy\PizzaGuy\bin\x86\Debug\PizzaGuy.pdb
+C:\Users\EAHS CS\Documents\GitHub\PizzaGuy\PizzaGuy\PizzaGuy\PizzaGuy\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\EAHS CS\Documents\GitHub\PizzaGuy\PizzaGuy\PizzaGuy\PizzaGuy\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\EAHS CS\Documents\GitHub\PizzaGuy\PizzaGuy\PizzaGuy\PizzaGuy\obj\x86\Debug\PizzaGuy.exe
+C:\Users\EAHS CS\Documents\GitHub\PizzaGuy\PizzaGuy\PizzaGuy\PizzaGuy\obj\x86\Debug\PizzaGuy.pdb
+C:\Users\EAHS CS\Documents\GitHub\PizzaGuy\PizzaGuy\PizzaGuy\PizzaGuy\bin\x86\Debug\Content\PizzaGuyBackdrop.xnb
+C:\Users\EAHSCS\Documents\GitHub\1\PizzaGuy\PizzaGuy\PizzaGuy\bin\x86\Debug\Content\SpriteSheet.xnb
+C:\Users\EAHSCS\Documents\GitHub\1\PizzaGuy\PizzaGuy\PizzaGuy\bin\x86\Debug\PizzaGuy.exe
+C:\Users\EAHSCS\Documents\GitHub\1\PizzaGuy\PizzaGuy\PizzaGuy\bin\x86\Debug\PizzaGuy.pdb
+C:\Users\EAHSCS\Documents\GitHub\1\PizzaGuy\PizzaGuy\PizzaGuy\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\EAHSCS\Documents\GitHub\1\PizzaGuy\PizzaGuy\PizzaGuy\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\EAHSCS\Documents\GitHub\1\PizzaGuy\PizzaGuy\PizzaGuy\obj\x86\Debug\PizzaGuy.exe
+C:\Users\EAHSCS\Documents\GitHub\1\PizzaGuy\PizzaGuy\PizzaGuy\obj\x86\Debug\PizzaGuy.pdb
+C:\Users\EAHS CS\Documents\GitHub\1\PizzaGuy\PizzaGuy\PizzaGuy\bin\x86\Debug\Content\SpriteSheet.xnb
+C:\Users\EAHS CS\Documents\GitHub\1\PizzaGuy\PizzaGuy\PizzaGuy\bin\x86\Debug\PizzaGuy.exe
+C:\Users\EAHS CS\Documents\GitHub\1\PizzaGuy\PizzaGuy\PizzaGuy\bin\x86\Debug\PizzaGuy.pdb
+C:\Users\EAHS CS\Documents\GitHub\1\PizzaGuy\PizzaGuy\PizzaGuy\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\EAHS CS\Documents\GitHub\1\PizzaGuy\PizzaGuy\PizzaGuy\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\EAHS CS\Documents\GitHub\1\PizzaGuy\PizzaGuy\PizzaGuy\obj\x86\Debug\PizzaGuy.exe
+C:\Users\EAHS CS\Documents\GitHub\1\PizzaGuy\PizzaGuy\PizzaGuy\obj\x86\Debug\PizzaGuy.pdb
+C:\Users\EAHS CS\Documents\GitHub\1\PizzaGuy\PizzaGuy\PizzaGuy\bin\x86\Debug\Content\background.xnb
+C:\Users\EAHSCS\Documents\GitHub\1\PizzaGuy\PizzaGuy\PizzaGuy\bin\x86\Debug\Content\background.xnb
+C:\Users\EAHSCS\Documents\GitHub\1\PizzaGuy\PizzaGuy\PizzaGuy\bin\x86\Debug\Content\pacmanghost.xnb
+C:\Users\EAHSCS\Documents\GitHub\1\PizzaGuy\PizzaGuy\PizzaGuy\bin\x86\Debug\Content\breakout.xnb
+C:\Users\EAHSCS\Documents\GitHub\1\PizzaGuy\PizzaGuy\PizzaGuy\bin\x86\Debug\Content\Map1.xnb
+C:\Users\EAHSCS\Documents\GitHub\1\PizzaGuy\PizzaGuy\PizzaGuy\bin\x86\Debug\xTile.dll
+C:\Users\EAHS CS\Documents\GitHub\1\PizzaGuy\PizzaGuy\PizzaGuy\bin\x86\Debug\Content\breakout.xnb
+C:\Users\EAHS CS\Documents\GitHub\1\PizzaGuy\PizzaGuy\PizzaGuy\bin\x86\Debug\Content\Map1.xnb
+C:\Users\EAHS CS\Documents\GitHub\1\PizzaGuy\PizzaGuy\PizzaGuy\bin\x86\Debug\xTile.dll
+C:\Users\EAHS CS\Documents\GitHub\1\PizzaGuy\PizzaGuy\PizzaGuy\bin\x86\Debug\Content\introMusic.xnb
+C:\Users\EAHS CS\Documents\GitHub\1\PizzaGuy\PizzaGuy\PizzaGuy\bin\x86\Debug\Content\introMusic.wma

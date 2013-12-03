@@ -5,54 +5,52 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using PizzaGuy;
+
 
 namespace PizzaGuy
 {
-    class PizzaGuy : Sprite
+    class PizzaGuy : MazeActor
     {
         public PizzaGuy(
             Vector2 location,
             Texture2D texture,
             Rectangle initialFrame,
-            Vector2 velocity) :
+            Vector2 velocity,
+            xTile.Layers.Layer map) :
 
-            base(location, texture, initialFrame, velocity)
+            base(location, texture, initialFrame, velocity, map)
         {
-
         }
 
         public override void Update(GameTime gameTime)
         {
             KeyboardState keyboard = Keyboard.GetState();
+
             if (keyboard.IsKeyDown(Keys.Right))
             {
-                Velocity = new Vector2(100, 0);
 
+                newDirection = Direction.RIGHT;
             }
 
             if (keyboard.IsKeyDown(Keys.Down))
             {
-                velocity = new Vector2(0, 100);
+
+                newDirection = Direction.DOWN;
             }
 
             if (keyboard.IsKeyDown(Keys.Up))
             {
-                velocity = new Vector2(0, -100);
+
+                newDirection = Direction.UP;
             }
 
             if (keyboard.IsKeyDown(Keys.Left))
             {
-                velocity = new Vector2(-100, 0);
+
+                newDirection = Direction.LEFT;
             }
 
             base.Update(gameTime);
         }
-
-        public override void Draw(SpriteBatch spriteBatch)
-        {
-            base.Draw(spriteBatch);
-        }
-
     }
 }
